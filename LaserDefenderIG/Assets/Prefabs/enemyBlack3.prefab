@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3609052005669894872}
   - component: {fileID: 3609052005669894871}
+  - component: {fileID: 2564023619385438818}
   m_Layer: 0
   m_Name: enemyBlack3
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2564023619385438818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3609052005669894870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85c1c5322109d048ad39bf16c173ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 7849986922083328608, guid: afed29ed23934df4497044887a3cbbe6, type: 3}
+  - {fileID: 8367540250429461225, guid: 8181b99e9ce666c438c90f12362304ec, type: 3}
+  - {fileID: 7688341849189214954, guid: 4517336c4aaf08743b25f35238bd94a2, type: 3}

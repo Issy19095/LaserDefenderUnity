@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.7f;
 
     [SerializeField] GameObject laserPrefab;
-    [SerializeField] float laserFiringSpeed = 0.3f;
+    [SerializeField] float laserFiringSpeed = 0.2f;
 
     float xMin, xMax, yMin, yMax;
 
