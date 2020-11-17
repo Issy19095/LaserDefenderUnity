@@ -7,6 +7,8 @@ public class EnemyPathing : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] float enemyMoveSpeed = 2f;
 
+    [SerializeField] WaveConfig waveConfig;
+
     //to show the next waypoint
     int waypointIndex = 0;
 
@@ -15,6 +17,7 @@ public class EnemyPathing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        waypoints = waveConfig.GetWaypoints();
         //set the startin pos of ship at waypoint 0
         transform.position = waypoints[waypointIndex].transform.position;
     }
