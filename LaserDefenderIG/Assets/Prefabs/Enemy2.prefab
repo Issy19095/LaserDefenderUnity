@@ -101,3 +101,4 @@ MonoBehaviour:
   - {fileID: 7430778558804416867, guid: 390961e916bd51e448e33742eb8831e6, type: 3}
   - {fileID: 6835278741193211511, guid: 638456c8cf54f114293cc34767fed5a5, type: 3}
   enemyMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: e056142e7e446b94d919c1e5fdafb2e3, type: 2}

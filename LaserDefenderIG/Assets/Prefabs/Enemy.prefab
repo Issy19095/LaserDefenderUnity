@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3609052005669894871}
   - component: {fileID: 2564023619385438818}
   m_Layer: 0
-  m_Name: enemyBlack3
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +100,4 @@ MonoBehaviour:
   - {fileID: 8584796329330822848, guid: 0f98794c5283ef6469362b1b77a39adf, type: 3}
   - {fileID: 1870997682010352077, guid: 05bb1cf1e6a13f0469d86f0529a238a7, type: 3}
   enemyMoveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 7f91b926807717d459075d2c1358f309, type: 2}
