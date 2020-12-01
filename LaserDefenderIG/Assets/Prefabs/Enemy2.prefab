@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 47115429611860247}
   - component: {fileID: 5031379019754637892}
   - component: {fileID: 5583809175782841794}
+  - component: {fileID: 5175550740610425960}
+  - component: {fileID: 469423972093922861}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -96,4 +98,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  waveConfig: {fileID: 0}
+  waveConfig: {fileID: 11400000, guid: e056142e7e446b94d919c1e5fdafb2e3, type: 2}
+--- !u!114 &5175550740610425960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698097515656906255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f2fe28c0c84b041950f35a0ad50c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyLaserPrefab: {fileID: 8403980996522225969, guid: 1025727808a16f847b79e65ea5ab2f79, type: 3}
+  enemtLaserSpeed: 10
+--- !u!60 &469423972093922861
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698097515656906255}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.82, y: 0.84}
+    newSize: {x: 0.82, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.049999997, y: 0.42}
+      - {x: 0.049999997, y: 0.41}
+      - {x: 0, y: 0.42}
+      - {x: -0.24, y: 0.42}
+      - {x: -0.39, y: 0.38}
+      - {x: -0.41, y: 0.32999998}
+      - {x: -0.41, y: -0.35}
+      - {x: -0.21, y: -0.42}
+      - {x: 0.26999998, y: -0.42}
+      - {x: 0.41, y: -0.22999999}
+      - {x: 0.41, y: 0.31}
+      - {x: 0.28, y: 0.42}
