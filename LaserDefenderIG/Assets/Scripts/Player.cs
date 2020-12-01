@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float laserFiringSpeed = 0.2f;
+    
+    [SerializeField] float health = 200;
 
     float xMin, xMax, yMin, yMax;
 
@@ -40,6 +42,28 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+    }
+
+    public void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
+        //if the object does not have a DamageDealer class end the method
+        if (!dmg) //dmg does not exist
+        {
+            return;
+        }
+        ProcessHit(dmg);
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamage();
+        dmg.Hit();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator FireContinuously()

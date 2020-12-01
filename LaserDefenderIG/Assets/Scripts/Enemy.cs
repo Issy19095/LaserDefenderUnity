@@ -18,12 +18,17 @@ public class Enemy : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
+        if (!dmg) //dmg does not exist
+        {
+            return;
+        }
         ProcessHit(dmg);
     }
 
     private void ProcessHit(DamageDealer dmg)
     {
         health -= dmg.GetDamage();
+        dmg.Hit();
 
         if (health <= 0)
         {
