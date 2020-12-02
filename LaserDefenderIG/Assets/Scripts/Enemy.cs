@@ -13,6 +13,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject enemyLaserPrefab;
     [SerializeField] float enemtLaserSpeed = 10f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
+
 
     //reduce health evertime an enemt collides with a laser
     public void OnTriggerEnter2D(Collider2D otherObject)
@@ -32,8 +35,15 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 
 
